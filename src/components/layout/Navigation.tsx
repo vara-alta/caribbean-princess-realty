@@ -51,10 +51,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav
-      className="bg-red-400  w-full h-20 flex items-center justify-end z-30"
-      ref={ref}
-    >
+    <nav className="w-full h-full z-30" ref={ref}>
       {/* HAMBURGER BUTTON */}
       <a
         className="w-[1.875rem] h-[1.875rem] flex flex-col justify-around absolute top-[55px] right-[35px] cursor-pointer z-40"
@@ -66,13 +63,13 @@ export default function Navigation() {
       </a>
 
       {/* MENU */}
-      <section
+      <div
         className={`min-h-screen absolute bg-white/90 text-[#f93a97] -right-[100%] top-0 w-[100%] sm:w-[60%] md:w-[35%] flex flex-col items-start justify-center font-ubuntu font-semibold tracking-widest p-12 text-2xl transition-all ease-in-out shadow-sm shadow-gray-200 duration-500 ${
           navActive && "right-[0%] z-50"
         }`}
         ref={ref}
       >
-        <section className="absolute top-4 left-4 flex items-center gap-4">
+        <section className="absolute top-4 left-4 flex items-center justify-center gap-4">
           <a
             href="https://www.facebook.com/people/Caribbean-Princess-Realty/100083177683200/"
             target="_blank"
@@ -80,7 +77,7 @@ export default function Navigation() {
           >
             <FontAwesomeIcon
               icon={faFacebook}
-              className="w-6 h-auto text-[#f93a97]"
+              className="flex items-center w-6 h-auto text-[#f93a97]"
             />
           </a>
           <a
@@ -90,7 +87,7 @@ export default function Navigation() {
           >
             <FontAwesomeIcon
               icon={faInstagram}
-              className="w-6 h-auto text-[#f93a97]"
+              className="flex items-center w-6 h-auto text-[#f93a97]"
             />
           </a>
         </section>
@@ -168,7 +165,7 @@ export default function Navigation() {
             </Link>
           </div>
         </section>
-      </section>
+      </div>
     </nav>
   );
 }
