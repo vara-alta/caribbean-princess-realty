@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getCookie } from "cookies-next";
 import { Montserrat, Ubuntu } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
@@ -7,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 import { LanguageSwitcher } from "@/components/global/LanguageSwitcher";
 import LocalTimeDisplay from "@/components/global/LocalTimeDisplay";
+import CookieBanner from "@/components/global/CookiesBanner";
 // import ShareLinkButtons from "@/components/global/ShareLinkButtons";
 
 const monserrat = Montserrat({
@@ -48,6 +50,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Verify if the user has accepted cookies for language selection
+  const cookieConsent = getCookie("cookieConsent");
+  let accepted = false;
+  if (cookieConsent === "accepted") {
+    accepted = true;
+  } else if (!cookieConsent) {
+    accepted = false;
+  }
   return (
     <html lang="en">
       <body
@@ -58,7 +68,12 @@ export default function RootLayout({
         {children}
         <ScrollToTopButton />
         <LocalTimeDisplay />
-        <LanguageSwitcher domain={domain} langs={langs} />
+        <LanguageSwitcher
+          domain={domain}
+          langs={langs}
+          cookiesAccepted={accepted}
+        />
+        <CookieBanner />
         <Footer />
       </body>
     </html>
