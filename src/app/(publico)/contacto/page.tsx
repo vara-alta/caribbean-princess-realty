@@ -16,7 +16,7 @@ export default function Contacto() {
             ¿Buscando la casa de sus sueños? o ¿Necesita una guía experta para
             comprar o vender?. Estamos aquí para ayudar. Llene nuestro
             formulario de abajo y discutamos como podemos ayudarle a encontrar
-            la casa perfecta o inversión para usted. You propiedad ideal está a
+            la casa perfecta o inversión para usted. Su propiedad ideal está a
             un solo click de distancia.{" "}
           </p>
           {/*  CONTACT FORM */}
