@@ -13,7 +13,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "relative text-white font-semibold bg-[#afe6d8] bg-gradient-to-r from-[#afe6d8] to-[#f93a97] rounded-3xl tracking-wide transition-all duration-300 ease-in-out";
+    "relative text-white bg-[#afe6d8] bg-gradient-to-r from-[#afe6d8] to-[#f93a97] rounded-3xl tracking-wide transition-all duration-300 ease-in-out";
 
   const variants = {
     primary:
