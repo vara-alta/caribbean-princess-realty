@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { setCookie, getCookie } from "cookies-next";
 
 // Define the Weglot type
 type Weglot = {
@@ -20,6 +21,7 @@ declare global {
 export type LanguageSwitcherProps = {
   domain: string;
   langs: { [key: string]: string };
+  cookiesAccepted: boolean; // Prop to check if cookies are accepted
 };
 
 /**
@@ -31,7 +33,11 @@ export type LanguageSwitcherProps = {
  *     langs={{ en: 'English', fr: 'French', es: 'Spanish' }}
  * />
  */
-export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({
+  domain,
+  langs,
+  cookiesAccepted,
+}: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [hostname, setHostname] = useState("");
@@ -40,6 +46,17 @@ export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
   useEffect(() => {
     // Ensure this runs only on the client
     setHostname(window.location.hostname.toLowerCase());
+
+    // Load language from cookies if available and cookies are accepted
+    if (cookiesAccepted) {
+      const storedLanguage = getCookie("siteLanguage") as string | undefined;
+      if (storedLanguage && langs[storedLanguage]) {
+        setLanguageSelected(storedLanguage);
+        if (window.Weglot) {
+          window.Weglot.switchTo(storedLanguage);
+        }
+      }
+    }
 
     const script = document.createElement("script");
     script.src = "https://cdn.weglot.com/weglot.min.js";
@@ -57,13 +74,15 @@ export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
     return () => {
       document.head.removeChild(script);
     };
-  }, []);
+  }, [langs, cookiesAccepted]);
 
   const pathAndQuery =
     pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
 
   const handleLanguageChange = (langCode: string) => {
     setLanguageSelected(langCode);
+    setCookie("siteLanguage", langCode, { maxAge: 365 * 24 * 60 * 60 }); // Store for 1 year
+
     if (window.Weglot) {
       window.Weglot.switchTo(langCode); // Dynamically switch the language
     } else if (!hostname.startsWith(langCode)) {
