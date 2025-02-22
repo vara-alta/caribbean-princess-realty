@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    // BREVO_API_KEY: z.string().min(1),
+    BREVO_API_KEY: z.string().min(1),
     // RESEND_API_KEY: z.string().min(1),
   },
   client: {
