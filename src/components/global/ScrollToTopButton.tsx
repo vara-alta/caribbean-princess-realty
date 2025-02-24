@@ -40,7 +40,7 @@ export default function ScrollToTopButton() {
       <Image
         src="/scrollToTopIcon.png"
         alt="Scroll to top of the page"
-        sizes="40px"
+        sizes="25vw"
         width={40}
         height={40}
         className="w-[40px] h-[40px]"
