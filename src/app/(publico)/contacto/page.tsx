@@ -1,5 +1,14 @@
 import ContactForm from "@/components/forms/ContactForm";
 import LocationMap from "@/components/LocationMap";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description:
+    "Contáctenos para obtener más información sobre nuestros servicios. Complete el formulario que hemos proporcionado y háganos saber sus consultas. Estamos esperando por usted.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
 
 export default function Contacto() {
   // Company's location

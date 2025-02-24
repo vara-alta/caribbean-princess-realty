@@ -1,3 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Términos & Condiciones",
+  description:
+    "Estos son los términos que rigen el uso de este servicio y el acuerdo que opera entre usted y la compañía. Estos términos establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
+
 export default function Terminos() {
   return (
     <article className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">

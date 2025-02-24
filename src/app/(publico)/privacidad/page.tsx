@@ -1,3 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Política de Privacidad",
+  description:
+    "En esta política de privacidad describimos nuestras prácticas y procedimientos con respecto a la recopilación, uso y divulgación de su información cuando utiliza nuestros servicios y cualquier entidad con la que trabajamos juntos para brindarle el mejor servicio posible y también informarle sobre sus derechos de privacidad y cómo  la ley le protege.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
+
 export default function Privacidad() {
   return (
     <article className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">

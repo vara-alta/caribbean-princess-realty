@@ -8,7 +8,7 @@ import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 import { LanguageSwitcher } from "@/components/global/LanguageSwitcher";
 import LocalTimeDisplay from "@/components/global/LocalTimeDisplay";
 import CookieBanner from "@/components/global/CookiesBanner";
-// import ShareLinkButtons from "@/components/global/ShareLinkButtons";
+import ShareLinkButtons from "@/components/global/ShareLinkButtons";
 
 const monserrat = Montserrat({
   variable: "--font-monserrat",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     template: "%s - Caribbean Princess Realty",
   },
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Empresa dedicada al sector inmobiliario establecida en La Ceiba, Honduras. Prestamos servicios de compra, venta, arrendamiento, y administración de inmuebles. Servimos tanto al público local como internacional.",
 };
 
 // Define the props to pass
-const domain = "appliancesfurniture.com";
+const domain = "caribbeanprincessrealty.com";
 const langs = {
   es: "es.svg",
   en: "us.svg",
@@ -55,7 +55,7 @@ export default function RootLayout({
         className={`${monserrat.className} ${ubuntu.variable} ${benedict.variable} text-[#808080] antialiased`}
       >
         <Header />
-        {/* <ShareLinkButtons /> */}
+        <ShareLinkButtons />
         {children}
         <ScrollToTopButton />
         <LocalTimeDisplay />

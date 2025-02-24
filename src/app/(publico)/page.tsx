@@ -1,6 +1,15 @@
 import PropertiesResume from "@/components/PropertiesResume";
 import PropertyRecruitment from "@/components/PropertyRecruitment";
 import ServicesResume from "@/components/ServicesResume";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Caribbean Princess Realty",
+  description:
+    "Empresa dedicada al sector inmobiliario establecida en La Ceiba, Honduras. Prestamos servicios de compra, venta, arrendamiento, y administración de inmuebles. Servimos tanto al público local como internacional.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
 
 export default function Home() {
   return (

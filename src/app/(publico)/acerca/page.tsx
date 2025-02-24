@@ -1,5 +1,13 @@
 import ServicesDetails from "@/components/ServicesDetails";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Acerca",
+  description:
+    "Caribbean Princess Realty es una empresa hondureña dedicada al sector inmobiliario establecida en La Ceiba, ciudad portuaria al norte de Honduras. Estamos al servicio del público local e internacional pero con un mayor enfoque en los extranjeros que quieran invertir sus recursos ya sea en un lugar para llamar hogar, un lugar de vacaciones o un activo para obtener ingresos.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
 export default function Acerca() {
   return (
     <section className="px-4 sm:px-8 lg:px-16 2xl:px-32">
@@ -30,7 +38,7 @@ export default function Acerca() {
               Somos conscientes de que cualquiera que sea su objetivo en materia
               inmobiliaria, llámese{" "}
               <span className="font-semibold text-[#f93a97]">
-                compra, venta, alquiler o gestión,
+                compra, venta, arrendamiento o administración,
               </span>{" "}
               puede resultar abrumador sin los conocimientos especializados
               necesarios. Nos aseguramos de crear una conexión con vendedores,

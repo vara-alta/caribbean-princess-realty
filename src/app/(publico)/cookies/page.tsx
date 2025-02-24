@@ -1,3 +1,13 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Política de Cookies",
+  description:
+    "Ésta política de cookies explica qué son las cookies y cómo las utilizamos. Debe leer esta política para comprender cuales son los tipos utilizamos o la información que recopilamos y cómo se utiliza la misma.",
+};
+
+export const dynamic = "force-static"; // This ensures the page is statically generated
+
 export default function Cookies() {
   return (
     <article className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
