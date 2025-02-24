@@ -45,7 +45,7 @@ const Header: React.FC = () => {
   });
 
   return (
-    <header className="relative w-full h-[calc(100vh-12rem)]">
+    <header className="relative w-full h-[calc(100vh-14rem)] lg:h-[calc(100vh-12rem)]">
       <video
         autoPlay
         loop
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#c2fff0]/70 to-[#f93a97]/70 mix-blend-overlay"></div>
 
-      <div className="absolute inset-0 bg-black/30 flex flex-col gap-24 items-center justify-center text-white text-center">
+      <div className="absolute inset-0 bg-black/30 flex flex-col gap-24 items-center justify-center text-white text-center px-4 sm:px-8 lg:px-16 2xl:px-32">
         <Link className="flex items-center" href="/">
           <Image
             src="/logo-caribbean-princess-realty.png"
@@ -72,10 +72,10 @@ const Header: React.FC = () => {
         </Link>
         {headerTitle === "Caribbean Princess Realty" ? (
           <div className="w-full flex flex-col items-center gap-6">
-            <h1 className="text-4xl md:text-6xl text-shadow-sm shadow-[#feebf5] font-ubuntu uppercase tracking-widest">
+            <h1 className="text-4xl min-[896px]:text-5xl min-[1152px]:text-6xl text-shadow-sm shadow-[#feebf5] font-ubuntu uppercase tracking-widest">
               {headerTitle}
             </h1>
-            <h2 className="text-lg text-shadow-sm shadow-[#feebf5] uppercase tracking-widest">
+            <h2 className="text-base md:text-lg text-shadow-sm shadow-[#feebf5] uppercase tracking-widest">
               Mariela Rodríguez Wildt | Jessie Rodríguez
             </h2>
           </div>

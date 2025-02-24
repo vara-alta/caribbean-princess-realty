@@ -14,11 +14,11 @@ export default function PropertyRecruitment() {
       />
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50" />
-      <div className="w-[50%] flex flex-col items-center gap-8 z-10">
-        <h2 className="text-7xl text-center text-[#afe6d8] font-benedict text-shadow-sm shadow-[#4e6660] tracking-wide capitalize">
+      <div className="w-full flex flex-col items-center gap-8 z-10">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-center text-[#afe6d8] font-benedict text-shadow-sm shadow-[#4e6660] tracking-wide capitalize">
           Trabaje con nosotros
         </h2>
-        <p className="tracking-wide leading-relaxed text-center">
+        <p className="w-full min-[448px]:w-[80%] min-[512px]:w-[70%] sm:w-[60%] min-[832px]:w-[50%] text-center text-sm min-[448px]:text-base tracking-wide leading-relaxed">
           ¿Es propietario(a) de un inmueble? En Caribbean Princess Realty nos
           encargaremos de que obtenga la mayor rentabilidad posible de su
           propiedad en cualquiera de los servicios que ofrecemos, sea compra,

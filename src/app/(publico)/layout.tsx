@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { getCookie } from "cookies-next";
 import { Montserrat, Ubuntu } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
@@ -50,14 +49,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Verify if the user has accepted cookies for language selection
-  const cookieConsent = getCookie("cookieConsent");
-  let accepted = false;
-  if (cookieConsent === "accepted") {
-    accepted = true;
-  } else if (!cookieConsent) {
-    accepted = false;
-  }
   return (
     <html lang="en">
       <body
@@ -68,12 +59,8 @@ export default function RootLayout({
         {children}
         <ScrollToTopButton />
         <LocalTimeDisplay />
-        <LanguageSwitcher
-          domain={domain}
-          langs={langs}
-          cookiesAccepted={accepted}
-        />
-        <CookieBanner />
+        <LanguageSwitcher domain={domain} langs={langs} />
+        {/* <CookieBanner /> */}
         <Footer />
       </body>
     </html>

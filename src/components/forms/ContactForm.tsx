@@ -132,11 +132,11 @@ export default function ContactForm() {
                 </label>
                 {/* PHONE NUMBER */}
                 <label
-                  htmlFor="phone-number"
+                  htmlFor="phoneNumber"
                   className="w-full sm:w-1/2 flex flex-col"
                 >
                   <div className="text-sm uppercase tracking-wide">
-                    Número de teléfono{" "}
+                    Teléfono{" "}
                     <span className="text-xs lowercase">(opcional)</span>
                   </div>
                   <Field

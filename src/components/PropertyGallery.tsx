@@ -34,7 +34,7 @@ export default function PropertyGallery() {
         loop={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Thumbs, FreeMode]}
-        className="relative h-[650px] w-full"
+        className="relative w-full h-[300px] min-[448px]:h-[350px] min-[512px]:h-[400px] sm:h-[450px] min-[704px]:h-[500px] md:h-[550px] min-[896px]:h-[600px] lg:h-[650px]"
         onSlideChange={handleSlideChange} // Update selected thumbnail on slide change
       >
         {property.gallery.map((property, index) => (
@@ -51,26 +51,42 @@ export default function PropertyGallery() {
             </div>
           </SwiperSlide>
         ))}
-        <div className="absolute w-[33%] space-y-4 text-white bottom-10 left-10 z-10 bg-black/40 p-8 tracking-wide">
-          <h2 className="text-lg text-[#c2fff0] font-ubuntu uppercase">
+        <div className="absolute w-full min-[384px]:w-[73%] min-[448px]:w-[68%] min-[512px]:w-[63%] min-[576px]:w-[58%] sm:w-[53%] min-[704px]:w-[48%] md:w-[43%] min-[896px]:w-[38%] lg:w-[33%] space-y-2 :min-[512px]:space-y-3 sm:space-y-4 text-white bottom-0 left-0 min-[448px]:bottom-2 min-[448px]:left-2 min-[512px]:bottom-4 min-[512px]:left-4 min-[576px]bottom-6 min-[576px]:left-6 sm:bottom-8 sn:left-8 md:bottom-10 md:left-10 z-10 bg-black/40 p-4 min-[704px]:p-6 min-[896px]:p-8 tracking-wide">
+          <h2 className="text-sm min-[512px]:text-base md:text-lg text-[#c2fff0] font-ubuntu uppercase">
             {property.title}
           </h2>
-          <div className="space-y-2">
-            <p className="uppercase font-bold">{property.status}</p>
-            <p className="font-semibold">{property.price}</p>
+          <div className="space-x-0 min-[512px]:space-y-1 sm:space-y-2">
+            <p className="text-xs min-[512px]:text-sm md:text-base uppercase font-bold">
+              {property.status}
+            </p>
+            <p className="text-xs min-[512px]:text-sm md:text-base font-semibold">
+              {property.price}
+            </p>
           </div>
         </div>
       </Swiper>
 
       <Swiper
         onSwiper={(swiper) => setThumbsSwiper(swiper)} // Initialize thumbs swiper
-        spaceBetween={4}
-        slidesPerView={4}
+        breakpoints={{
+          // When the window width is >= 384px
+          384: {
+            slidesPerView: 3,
+            spaceBetween: 6,
+          },
+          // When the window width is >= 512px
+          512: {
+            slidesPerView: 4,
+            spaceBetween: 4,
+          },
+        }}
+        spaceBetween={8}
+        slidesPerView={2}
         freeMode={true}
         navigation={true}
         watchSlidesProgress={true}
         modules={[Thumbs, FreeMode, Navigation]}
-        className="thumbs w-[55%] h-32 mt-3 flex-wrap"
+        className="thumbs w-[95%] min-[576px]:w-[85%] sm:w-[75%] min-[704px]:w-[65%] min-[896px]:w-[55%] h-32 mt-3 px-4 flex-wrap"
       >
         {property.gallery.map((property, index) => (
           <SwiperSlide key={index}>

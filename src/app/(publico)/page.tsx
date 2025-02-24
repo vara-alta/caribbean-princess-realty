@@ -5,14 +5,15 @@ import ServicesResume from "@/components/ServicesResume";
 export default function Home() {
   return (
     <section className="w-full">
-      <section className="w-full px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+      <section className="w-full px-4 sm:px-8 lg:px-16 2xl:px-32">
+        {/* md:px-8 lg:px-16 xl:px-32 2xl:px-64 */}
         <section className="py-16 lg:py-20 xl:py-24">
-          <div className="flex flex-col items-center gap-16">
-            <h2 className="text-7xl text-center text-[#f93a97] font-benedict text-shadow-sm shadow-[#64173c] tracking-wide capitalize">
+          <div className="flex flex-col items-center gap-8 sm:gap-12 md:gap-16">
+            <h2 className="text-4xl min-[448px]:text-5xl lg:text-6xl xl:text-7xl text-center text-[#f93a97] font-benedict text-shadow-sm shadow-[#64173c] tracking-wide capitalize">
               Sobre nosotros
             </h2>
-            <p className="w-[50%] text-center leading-relaxed">
-              <span className="font-semibold font-benedict text-3xl text-[#afe6d8] text-shadow-sm shadow-[#4e6660] tracking-widest">
+            <p className="w-full min-[448px]:w-[80%] min-[512px]:w-[70%] sm:w-[60%] min-[832px]:w-[50%] text-center text-sm min-[448px]:text-base tracking-wide leading-relaxed">
+              <span className="font-semibold font-benedict text-2xl min-[448px]:text-3xl text-[#afe6d8] text-shadow-sm shadow-[#4e6660] tracking-widest">
                 Caribbean Princess Realty{" "}
               </span>
               es una empresa <span className="underline">hondureña</span>{" "}

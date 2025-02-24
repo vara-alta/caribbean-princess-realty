@@ -29,11 +29,11 @@ export default function Propiedad() {
         </section>
 
         {/* PROPERTY DESCRIPTION */}
-        <section className="w-full h-auto space-y-12 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <section className="w-full h-auto space-y-4 sm:space-y-8 md:space-y-12 px-4 sm:px-8 lg:px-16 2xl:px-3">
           {/* TEXTO */}
           <Breadcrumbs />
-          <div className="flex gap-12 w-full text-sm">
-            <div className="w-1/3 space-y-12">
+          <div className="flex flex-col min-[704px]:flex-row gap-12 min-[704px]:gap-4 md:gap-8 min-[896px]:gap-12 w-full text-sm">
+            <div className="w-full min-[704px]:w-1/3 space-y-4 sm:space-y-8 md:space-y-12">
               <div className="space-y-4">
                 <p className="leading-relaxed">{property.description}</p>
                 <p>
@@ -45,7 +45,7 @@ export default function Propiedad() {
                   {property.area}
                 </p>
               </div>
-              <div className="w-full flex items-center justify-center gap-6">
+              <div className="w-full flex flex-row min-[704px]:flex-col min-[1152px]:flex-row min-[1152px]:items-center justify-center gap-4 min-[1152px]:gap-6">
                 <a href="tel:50495827099">
                   <Button variant="primary" size="md">
                     Hacer llamada
@@ -58,7 +58,7 @@ export default function Propiedad() {
                 </a>
               </div>
             </div>
-            <div className="w-2/3">
+            <div className="w-full min-[704px]:w-2/3">
               {/* PROPERTY VIDEO */}
               <PropertyVideo />
             </div>

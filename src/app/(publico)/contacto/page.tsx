@@ -9,9 +9,9 @@ export default function Contacto() {
   return (
     <section className="w-full">
       {/* FORM SECTION */}
-      <section className="flex px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 py-16 lg:py-20 xl:py-24">
+      <section className="flex flex-col gap-8 min-[896px]:gap-0 min-[896px]:flex-row px-4 sm:px-8 lg:px-16 2xl:px-32 py-16 lg:py-20 xl:py-24">
         {/* Left side */}
-        <div className="w-3/4 space-y-6 border-r border-solid border-[#f93a97] pr-16">
+        <div className="w-full min-[896px]:w-[1fr] space-y-6 min-[896px]:border-r min-[896px]:border-solid min-[896px]:border-[#f93a97] min-[896px]:pr-8 lg:pr-12 min-[1152px]:pr-16">
           <p className="text-sm leading-relaxed">
             ¿Buscando la casa de sus sueños? o ¿Necesita una guía experta para
             comprar o vender?. Estamos aquí para ayudar. Llene nuestro
@@ -23,7 +23,7 @@ export default function Contacto() {
           <ContactForm />
         </div>
         {/* Right side */}
-        <section className="w-1/4 flex flex-col gap-8 pl-16">
+        <section className="w-full min-[896px]:w-[420px] flex flex-col gap-8 min-[896px]:pl-8 lg:pl-12 min-[1152px]:pl-16">
           <div className="space-y-1">
             <h3 className="uppercase tracking-wide">Teléfono</h3>
             <a

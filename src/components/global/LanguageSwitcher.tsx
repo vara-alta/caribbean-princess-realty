@@ -21,7 +21,6 @@ declare global {
 export type LanguageSwitcherProps = {
   domain: string;
   langs: { [key: string]: string };
-  cookiesAccepted: boolean; // Prop to check if cookies are accepted
 };
 
 /**
@@ -33,22 +32,23 @@ export type LanguageSwitcherProps = {
  *     langs={{ en: 'English', fr: 'French', es: 'Spanish' }}
  * />
  */
-export const LanguageSwitcher = ({
-  domain,
-  langs,
-  cookiesAccepted,
-}: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [hostname, setHostname] = useState("");
   const [languageSelected, setLanguageSelected] = useState("en");
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
   useEffect(() => {
     // Ensure this runs only on the client
     setHostname(window.location.hostname.toLowerCase());
 
+    // Check if cookies are accepted
+    const consent = getCookie("cookieConsent") as string | undefined;
+    setCookiesAccepted(consent === "accepted");
+
     // Load language from cookies if available and cookies are accepted
-    if (cookiesAccepted) {
+    if (consent === "accepted") {
       const storedLanguage = getCookie("siteLanguage") as string | undefined;
       if (storedLanguage && langs[storedLanguage]) {
         setLanguageSelected(storedLanguage);
@@ -58,30 +58,38 @@ export const LanguageSwitcher = ({
       }
     }
 
-    const script = document.createElement("script");
-    script.src = "https://cdn.weglot.com/weglot.min.js";
-    script.async = true;
-    document.head.appendChild(script);
+    // Load Weglot script only if not already added
+    if (!document.querySelector("#weglot-script")) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.weglot.com/weglot.min.js";
+      script.async = true;
+      script.id = "weglot-script";
+      document.head.appendChild(script);
 
-    script.onload = () => {
-      if (window.Weglot) {
-        window.Weglot.initialize({
-          api_key: process.env.NEXT_PUBLIC_WEGLOT_API || "",
-        });
-      }
-    };
+      script.onload = () => {
+        if (window.Weglot) {
+          window.Weglot.initialize({
+            api_key: process.env.NEXT_PUBLIC_WEGLOT_API || "",
+          });
+        }
+      };
+    }
 
     return () => {
-      document.head.removeChild(script);
+      const script = document.querySelector("#weglot-script");
+      if (script) document.head.removeChild(script);
     };
-  }, [langs, cookiesAccepted]);
+  }, [langs]);
 
   const pathAndQuery =
     pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
 
   const handleLanguageChange = (langCode: string) => {
     setLanguageSelected(langCode);
-    setCookie("siteLanguage", langCode, { maxAge: 365 * 24 * 60 * 60 }); // Store for 1 year
+
+    if (cookiesAccepted) {
+      setCookie("siteLanguage", langCode, { maxAge: 365 * 24 * 60 * 60 }); // Store for 1 year
+    }
 
     if (window.Weglot) {
       window.Weglot.switchTo(langCode); // Dynamically switch the language

@@ -7,23 +7,23 @@ export default function Footer() {
   return (
     <footer className="w-full flex flex-col items-center pb-6">
       <SocialMediaIcons />
-      <section className="w-[50%] flex flex-col items-center gap-16">
+      <section className="w-[90%] min:[384px]:w-[80%] min-[448px]:w-[70%] min-[512px]:w-[60%] sm:w-[50%] flex flex-col items-center gap-12 sm:gap-16">
         {/* DIRECCION */}
         <div className="flex flex-col items-center gap-2">
-          <h3 className="font-benedict text-[#afe6d8] text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
+          <h3 className="font-benedict text-[#afe6d8] text-3xl sm:text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
             Dirección
           </h3>
-          <p className="text-center leading-relaxed">
+          <p className="text-sm sm:text-base text-center leading-relaxed">
             2do piso del Edificio Banco Lafise, Bo. Solares Nuevos, Avenida San
             Isidro entre calle 12 y 13, La Ceiba, Atlántida, Honduras, C.A.
           </p>
         </div>
         {/* HORARIOS DE OFICINA */}
         <div className="flex flex-col items-center gap-2">
-          <h3 className="font-benedict text-[#afe6d8] text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
+          <h3 className="font-benedict text-[#afe6d8] text-3xl sm:text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
             Horario de oficina
           </h3>
-          <div className="flex flex-col text-center capitalize">
+          <div className="flex flex-col text-sm sm:text-base text-center capitalize">
             <p>
               lunes - viernes, 8 <span className="uppercase">am</span> - 4{" "}
               <span className="uppercase">pm</span>
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
         {/* CONTACTO */}
         <div className="flex flex-col items-center gap-3">
-          <h3 className="font-benedict text-[#afe6d8] text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
+          <h3 className="font-benedict text-[#afe6d8] text-3xl sm:text-4xl text-shadow-sm shadow-[#4e6660] tracking-wide">
             Contacto
           </h3>
           <div className="flex gap-8 items-center">
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         {/* MENU */}
-        <nav className="flex gap-12 text-xl text-[#f93a97] text-shadow-sm shadow-[#64173c] font-ubuntu tracking-wide">
+        <nav className="flex flex-col sm:flex-row gap-12 text-xl text-[#f93a97] text-shadow-sm shadow-[#64173c] font-ubuntu tracking-wide">
           <Link
             href={"/"}
             className="flex items-center justify-center h-full relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[0px] after:h-[2px] after:bg-[#f93a97] after:transition-all hover:after:w-[100%] focus-visible:after:w-[100%]"
@@ -81,13 +81,13 @@ export default function Footer() {
         <div className="w-full flex flex-col items-center gap-2">
           {/* COPYRIGHT */}
           <div className="flex flex-col">
-            <p className="text-center">
+            <p className="text-sm sm:text-base text-center">
               &#169; {date.getFullYear()} Caribbean Princess Realty
             </p>
           </div>
           {/* POLITICS */}
           <nav
-            className="flex gap-6 text-xs"
+            className="flex gap-4 sm:gap-6 text-[10px] sm:text-xs"
             aria-label="Footer Navigation - Policies"
           >
             <div className="flex">
