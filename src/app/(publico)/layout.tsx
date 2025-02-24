@@ -60,7 +60,7 @@ export default function RootLayout({
         <ScrollToTopButton />
         <LocalTimeDisplay />
         <LanguageSwitcher domain={domain} langs={langs} />
-        {/* <CookieBanner /> */}
+        <CookieBanner />
         <Footer />
       </body>
     </html>
