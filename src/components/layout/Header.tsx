@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         <Link className="flex items-center" href="/">
           <Image
             src="/logo-caribbean-princess-realty.png"
-            priority={true}
+            loading="eager"
             alt="Caribbean Princess Realty"
             sizes="(max-width:512px) 200px, 220px"
             width={220}
@@ -105,7 +105,6 @@ const Header: React.FC = () => {
               <Link className="flex items-center" href="/">
                 <Image
                   src="/logo-caribbean-princess-realty.png"
-                  priority={true}
                   alt="Caribbean Princess Realty"
                   sizes="(max-width:512px) 120px, 150px"
                   width={150}
