@@ -6,11 +6,6 @@ export const metadata: Metadata = {
   title: "404 error",
 };
 
-// Optional: Explicitly define static generation
-export function getStaticProps() {
-  return { props: {} };
-}
-
 export const dynamic = "force-static"; // This ensures the page is statically generated
 
 export default function notFound() {
