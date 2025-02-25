@@ -24,7 +24,7 @@ export const properties: Property[] = [
     _id: "8",
     thumbnail:
       "/propiedades/propiedad_8/lote-con-vista-panoramica-en-residencial-las-colinas.jpg",
-    video: "/header-video.mp4",
+    video: "/palm-tree-header-video.mp4",
     slug: "lote-con-vista-panoramica-en-residencial-las-colinas",
     title: "Lote con vista panorámica en residencial Las Colinas",
     snippet:
@@ -61,7 +61,7 @@ export const properties: Property[] = [
     _id: "7",
     thumbnail:
       "/propiedades/propiedad_7/propiedad-de-2-casas-de-habitacion.jpg",
-    video: "/header-video.mp4",
+    video: "/palm-tree-header-video.mp4",
     slug: "propiedad-de-2-casas-de-habitacion",
     title: "Propiedad de 2 casas de habitación",
     snippet:
@@ -306,7 +306,7 @@ export const properties: Property[] = [
     _id: "4",
     thumbnail:
       "/propiedades/propiedad_4/casa-de-dos-pisos-en-la-comunidad-de-boca-vieja.jpeg",
-    video: "/header-video.mp4",
+    video: "/palm-tree-header-video.mp4",
     slug: "casa-de-dos-pisos-en-la-comunidad-de-boca-vieja",
     title: "Casa espaciosa de dos pisos en la comunidad de Boca Vieja",
     snippet:

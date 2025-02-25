@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         muted
         className="absolute top-0 w-full h-full object-cover brightness-[1] contrast-[1.2] filter sepia-[0.3] hue-rotate-[300deg] opacity-55"
       >
-        <source src="/header-video.mp4" type="video/mp4" />
+        <source src="/palm-tree-header-video.mp4" type="video/mp4" />
         Tu navegador no soporta video.
       </video>
 
