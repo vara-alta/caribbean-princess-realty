@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = "force-static"; // This ensures the page is statically generated
+
 export default function Acerca() {
   return (
     <section className="px-4 sm:px-8 lg:px-16 2xl:px-32">
