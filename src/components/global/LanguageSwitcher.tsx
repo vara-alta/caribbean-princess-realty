@@ -36,7 +36,7 @@ export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [hostname, setHostname] = useState("");
-  const [languageSelected, setLanguageSelected] = useState("en");
+  const [languageSelected, setLanguageSelected] = useState("es");
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
   useEffect(() => {
