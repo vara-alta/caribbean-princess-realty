@@ -59,7 +59,7 @@ export default function PropertiesList({
                 src={property.thumbnail}
                 alt={property.title}
                 fill
-                sizes="25vw"
+                sizes="50vw"
                 className={`absolute object-cover rounded-t-xl transition-all duration-1000 ease-in-out ${
                   hoveredProperty == index ? "scale-110" : ""
                 }`}

@@ -104,13 +104,13 @@ export const LanguageSwitcher = ({ domain, langs }: LanguageSwitcherProps) => {
         <button
           key={langCode}
           onClick={() => handleLanguageChange(langCode)}
-          className={`flex items-center gap-2 p-2 w-full text-left border border-gray-300 rounded transition-colors ease-in-out duration-300 hover:bg-bgsecondary ${
-            languageSelected === langCode ? "bg-[#bbc6cc]" : ""
+          className={`flex items-center gap-2 p-2 w-full text-left border border-gray-300 rounded transition-colors ease-in-out duration-300 hover:bg-[#f93a97] ${
+            languageSelected === langCode ? "bg-[#afe6d8]" : ""
           }`}
         >
           <Image
-            src={`${langName}`}
-            alt=""
+            src={`/banderas/${langName}`}
+            alt={`${langName} flag`}
             width={20}
             height={20}
             className="w-[20px] h-[20px]"
