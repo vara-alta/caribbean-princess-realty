@@ -33,6 +33,11 @@ const CookieBanner = () => {
     setIsVisible(false);
   };
 
+  const handleClose = () => {
+    setCookie("cookieConsent", "rejected", { maxAge: 1 * 24 * 60 * 60 });
+    setIsVisible(false);
+  };
+
   if (isAccepted || !isVisible) return null;
 
   return (
@@ -41,7 +46,7 @@ const CookieBanner = () => {
         className="text-[#f93a97] absolute top-4 right-4 transition-all ease-linear duration-300 cursor-pointer hover:text-opacity-30"
         width={30}
         height={30}
-        // onClick={setIsVisible(false) }
+        onClick={handleClose}
       />
       <div className="space-y-4">
         <h3 className="text-[#f93a97] text-lg font-ubuntu">
