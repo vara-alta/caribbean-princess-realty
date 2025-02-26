@@ -22,7 +22,7 @@ export default function PropertyRecruitment() {
           ¿Es propietario(a) de un inmueble? En Caribbean Princess Realty nos
           encargaremos de que obtenga la mayor rentabilidad posible de su
           propiedad en cualquiera de los servicios que ofrecemos, sea compra,
-          venta, alquiler y administración y gestión de los mismos.
+          venta, alquiler y administración de los mismos.
         </p>
         <Link href={"/contacto"}>
           <Button variant="primary" size="lg">
