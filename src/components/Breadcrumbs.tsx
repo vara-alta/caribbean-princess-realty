@@ -7,18 +7,18 @@ import { useEffect, useState } from "react";
 export default function Breadcrumbs() {
   const pathname = usePathname();
   const pathnames = pathname.split("/").filter((x) => x);
-  const [breadcrumbWordLimit, setbreadcrumbWordLimit] = useState(8);
+  const [breadcrumbWordLimit, setBreadcrumbWordLimit] = useState(4);
 
   useEffect(() => {
     const updateWordLimit = () => {
-      setbreadcrumbWordLimit(
+      setBreadcrumbWordLimit(
         window.innerWidth < 448
           ? 4
           : window.innerWidth < 576
           ? 6
           : window.innerWidth < 704
           ? 8
-          : window.innerWidth < 823
+          : window.innerWidth < 832
           ? 10
           : 12
       );
