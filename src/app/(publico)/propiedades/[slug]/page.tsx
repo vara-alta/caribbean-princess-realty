@@ -29,11 +29,11 @@ export default function Propiedad() {
         </section>
 
         {/* PROPERTY DESCRIPTION */}
-        <section className="w-full h-auto space-y-4 sm:space-y-8 md:space-y-12 px-4 sm:px-8 lg:px-16 2xl:px-3">
+        <section className="w-full h-auto space-y-4 sm:space-y-8 md:space-y-12 px-4 sm:px-8 lg:px-16 2xl:px-32">
           {/* TEXTO */}
           <Breadcrumbs />
           <div className="flex flex-col min-[704px]:flex-row gap-12 min-[704px]:gap-4 md:gap-8 min-[896px]:gap-12 w-full text-sm">
-            <div className="w-full min-[704px]:w-1/3 space-y-4 sm:space-y-8 md:space-y-12">
+            <div className="w-full min-[704px]:w-1/3 space-y-8 sm:space-y-10 md:space-y-12">
               <div className="space-y-4">
                 <p className="leading-relaxed">{property.description}</p>
                 <p>
