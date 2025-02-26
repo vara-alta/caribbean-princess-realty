@@ -62,7 +62,11 @@ export default function ContactForm() {
       onSubmit={submitForm}
     >
       {(formik) => (
-        <form className="space-y-8" onSubmit={formik.handleSubmit} noValidate>
+        <form
+          className="space-y-12 sm:space-y-14 md:space-y-16"
+          onSubmit={formik.handleSubmit}
+          noValidate
+        >
           {/* FIELD SECTION */}
           <div className="space-y-6">
             {/* MATRIZ STRUCTURE */}
