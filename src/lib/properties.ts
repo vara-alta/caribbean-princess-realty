@@ -67,7 +67,7 @@ export const properties: Property[] = [
     snippet:
       "Propiedad que consta de dos casas de habitación ubicada en un vecindario céntrico de la ciudad lindante al Club de Golf Dantoni y diversidad de comercios.",
     description:
-      "Propiedad que consta de dos casas de habitación ubicada en un vecindario céntrico de la ciudad lindante al Club de Golf Dantoni y diversidad de comercios.",
+      "Propiedad que consta de dos casas de habitación, ubicada en un vecindario céntrico de la ciudad, rodeada de una extensa área verde al ser lindante al Club de Golf Dantoni y diversidad de comercios como: farmacias, supermercados, centros comerciales, cafeterías, bancos y más.",
     gallery: [
       {
         src: "/propiedades/propiedad_7/propiedad-de-2-casas-de-habitacion.jpg",
@@ -541,7 +541,7 @@ export const properties: Property[] = [
     snippet:
       "Ubicada en el área turística de Playa Helen en la comunidad de Sambo Creek, cerca del Hotel Canadien.",
     description:
-      "Propiedad que consta de dos casas de habitación, ubicada en un vecindario céntrico de la ciudad, rodeada de una extensa área verde al ser lindante al Club de Golf Dantoni y diversidad de comercios como: farmacias, supermercados, centros comerciales, cafeterías, bancos y más.",
+      "Ubicada en el área turística de Playa Helen en la comunidad de Sambo Creek, cerca del Hotel Canadien.",
     gallery: [
       {
         src: "/propiedades/propiedad_1/casa-frente-al-mar-caribe-en-playa-helen-exterior.jpg",
