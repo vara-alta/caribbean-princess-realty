@@ -15,9 +15,8 @@ export default function Home() {
   return (
     <section className="w-full">
       <section className="w-full px-4 sm:px-8 lg:px-16 2xl:px-32">
-        {/* md:px-8 lg:px-16 xl:px-32 2xl:px-64 */}
         <section className="py-16 lg:py-20 xl:py-24">
-          <div className="flex flex-col items-center gap-8 sm:gap-12 md:gap-16">
+          <div className="flex flex-col items-center gap-12 sm:gap-14 md:gap-16">
             <h2 className="text-4xl min-[448px]:text-5xl lg:text-6xl xl:text-7xl text-center text-[#f93a97] font-benedict text-shadow-sm shadow-[#64173c] tracking-wide capitalize">
               Sobre nosotros
             </h2>
